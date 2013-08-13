@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 version=$1;
 if [ ! -n "$version" ]; then
   echo "unknown php version ";
