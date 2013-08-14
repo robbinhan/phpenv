@@ -4,22 +4,22 @@ if [ ! -n "$version" ]; then
   echo "unknown php version ";
   exit;
 fi
-
-url="http://museum.php.net/php5/";
-prefix="php-";
-ext=".tar.bz2";
+definitions_dir="./definitions/"
+config_file_name=$definitions_dir$version;
+http_file_path=`cat $config_file_name`
 save_file_name="/tmp/$version$ext";
 save_file_path="/tmp/$prefix$version";
 install_dir="$HOME/.phpenv/versions/$version";
 if [ ! -d "$install_dir" ]; then
+  echo "make install dir..."
   mkdir $install_dir;
 fi
 
 #这里的-f参数判断是否存在
 #download
-echo "$url$prefix$version$ext downloading……"
+echo "$http_file_path  downloading……"
 if [ ! -f "$save_file_name" ]; then
-  `wget  "$url$prefix$version$ext" -O $save_file_name`;
+  `wget  "$http_file_path" -O $save_file_name`;
 fi
 #unpack
 #判断解包目录是否存在
