@@ -5,6 +5,8 @@ if [ ! -n "$version" ]; then
   exit;
 fi
 definitions_dir="./definitions/"
+prefix="php-"
+ext=".tar.bz2"
 config_file_name=$definitions_dir$version;
 http_file_path=`cat $config_file_name`
 save_file_name="/tmp/$version$ext";
