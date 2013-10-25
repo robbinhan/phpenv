@@ -21,7 +21,7 @@ fi
 #download
 echo "$http_file_path  downloading……"
 if [ ! -f "$save_file_name" ]; then
-  `wget  "$http_file_path" -O $save_file_name`;
+  `wget  "$http_file_path" -cO $save_file_name`;
 fi
 #unpack
 #判断解包目录是否存在
