@@ -1,3 +1,0 @@
-[submodule "phpenv"]
-	path = phpenv
-	url = git@github.com:CHH/phpenv.git
