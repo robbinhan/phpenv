@@ -14,7 +14,7 @@ save_file_path="/tmp/$prefix$version";
 install_dir="$HOME/.phpenv/versions/$version";
 if [ ! -d "$install_dir" ]; then
   echo "make install dir..."
-  mkdir $install_dir;
+  mkdir -p $install_dir;
 fi
 
 #这里的-f参数判断是否存在
